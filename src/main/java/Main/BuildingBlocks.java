@@ -21,7 +21,7 @@ public class BuildingBlocks {
         return name;
     }
 
-    public String Arrays() {
+    public String toString() {
         return "BuildingBlocks: " +
                 "name='" + name + '\'' +
                 ", mobilityBlocks='" + mobilityBlocks + '\'' +
@@ -30,4 +30,5 @@ public class BuildingBlocks {
                 ", lightLevel=" + lightLevel +
                 ", isTransparent=" + isTransparent;
     }
+
 }
