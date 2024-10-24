@@ -20,4 +20,14 @@ public class BuildingBlocks {
     public String getName() {
         return name;
     }
+
+    public String Arrays() {
+        return "BuildingBlocks: " +
+                "name='" + name + '\'' +
+                ", mobilityBlocks='" + mobilityBlocks + '\'' +
+                ", locationBlocks='" + locationBlocks + '\'' +
+                ", hardness=" + hardness +
+                ", lightLevel=" + lightLevel +
+                ", isTransparent=" + isTransparent;
+    }
 }
