@@ -1,6 +1,8 @@
 package Main;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class Sorting {
@@ -30,5 +32,18 @@ public class Sorting {
         System.out.println("\nSort by light level (descending):");
         sortedByLightLevelDesc.forEach(System.out::println);
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the block name to search:");
+        String blockName = scanner.nextLine();
+
+        Optional<BuildingBlocks> foundBlock = Stream.of(arr)
+                .filter(block -> block.getName().equalsIgnoreCase(blockName))
+                .findFirst();
+
+        if (foundBlock.isPresent()) {
+            System.out.println("Block found: " + foundBlock.get());
+        } else {
+            System.out.println("Block not found :(");
+        }
     }
 }
